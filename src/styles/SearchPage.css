@@ -1,0 +1,25 @@
+.search-results {
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.search-results h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-section h3 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}

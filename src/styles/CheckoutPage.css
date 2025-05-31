@@ -1,0 +1,50 @@
+.checkout-container {
+  max-width: 600px;
+  margin: 60px auto 0 auto;
+  padding: 40px 20px;
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.price {
+    margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: rgb(179, 21, 179);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgb(234, 0, 255);
+}
