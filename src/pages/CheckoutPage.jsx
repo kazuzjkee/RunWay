@@ -41,9 +41,9 @@ const CheckoutPage = () => {
       customer: formData,
     };
 
-    const TELEGRAM_BOT_TOKEN = '7829464336:AAEATZdpU44iysK7ijPgX4IoEStAFJ-2HJk';
-    const CHAT_ID = '772422183';
-
+    const TELEGRAM_BOT_TOKEN = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+    const CHAT_ID = process.env.REACT_APP_CHAT_ID;
+    
     const messageText = `
 📦 Новый заказ!
 
@@ -63,27 +63,27 @@ ${order.items.map(item => `- ${item.title} (${item.size}), ${item.price} ₽`).j
     `;
 
     try {
-      const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,  {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: messageText,
-        }),
-      });
+        const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,  {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: messageText,
+            }),
+        });
 
-      if (!response.ok) {
-        throw new Error('Ошибка отправки сообщения через Telegram API');
-      }
+        if (!response.ok) {
+            throw new Error('Ошибка отправки сообщения через Telegram API');
+        }
 
-      alert('Заказ оформлен! Мы свяжемся с вами в ближайшее время.');
-      localStorage.removeItem('cart'); 
-      setFormData({ name: '', phone: '', address: '', comment: '' });
+        alert('Заказ оформлен! Мы свяжемся с вами в ближайшее время.');
+        localStorage.removeItem('cart'); 
+        setFormData({ name: '', phone: '', address: '', comment: '' });
     } catch (error) {
-      console.error('Ошибка при оформлении заказа:', error);
-      alert('Произошла ошибка при отправке заказа. Попробуйте позже.');
+        console.error('Ошибка при оформлении заказа:', error);
+        alert('Произошла ошибка при отправке заказа. Попробуйте позже.');
     }
   };
 
