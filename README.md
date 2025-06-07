@@ -12,16 +12,16 @@
 ## 📸 Скриншоты 
 
 ### Главная страница
-![Главная страница](/public/images/screenshots/home.png)
+![Главная страница](/public/screenshots/home.gif)
 
 ### Страница товара
-![Страница товара](/public/images/screenshots/product-detail.png)
+![Страница товара](/public/screenshots/product-detail.gif)
 
 ### Корзина
-![Корзина](/public/images/screenshots/cart.png)
+![Корзина](/public/screenshots/cart.png)
 
 ### Оформление заказа
-![Оформление заказа](/public/images/screenshots/checkout.png)
+![Оформление заказа](/public/screenshots/checkout.png)
 
 ---
 
@@ -91,7 +91,7 @@
     REACT_APP_TELEGRAM_BOT_TOKEN
     REACT_APP_CHAT_ID
          
-5. Нажми "Deploy"  и получи ссылку вроде https://runway.vercel.app.
+5. Нажми "Deploy"  и получи ссылку вроде https://runway-alpha.vercel.app/.
 
 ## 📝 Что можно улучшить в будущем? 
 
