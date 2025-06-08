@@ -23,3 +23,31 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  transition: color 0.3s ease;
+}
+
+.pagination button:hover {
+  color: rgb(179, 21, 179);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #333;
+}

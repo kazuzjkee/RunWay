@@ -8,6 +8,9 @@ import products from '../assets/data/products';
 const MenPage = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  const itemsPerPage = 50;
 
   useEffect(() => {
     const search = new URLSearchParams(window.location.search).get('search');
@@ -21,6 +24,23 @@ const MenPage = () => {
     setFilteredProducts(filtered);
   }, []);
 
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredProducts.slice(indexOfFirstItem, indexOfLastItem);
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <div className="catalog-page">
       <Header />
@@ -28,13 +48,22 @@ const MenPage = () => {
         <h2>Мужские кроссовки</h2>
         {searchTerm && <p>Результаты поиска: "{searchTerm}"</p>}
         <div className="product-list">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map(product => (
+          {currentItems.length > 0 ? (
+            currentItems.map(product => (
               <ProductCard key={product.id} product={product} />
             ))
           ) : (
-            <p>Ничего не найдено</p>
+            <p>Товаров не найдено</p>
           )}
+        </div>
+        <div className="pagination">
+          <button onClick={goToPrevPage} disabled={currentPage === 1}>
+            Предыдущая
+          </button>
+          <span>Страница {currentPage} из {totalPages}</span>
+          <button onClick={goToNextPage} disabled={currentPage === totalPages}>
+            Следующая
+          </button>
         </div>
       </section>
       <Footer />
