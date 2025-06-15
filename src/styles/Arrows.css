@@ -31,10 +31,9 @@
   right: -50px;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .custom-prev,
   .custom-next {
-    display: none; /* Скрываем стрелки на мобильных */
+    display: none;
   }
 }

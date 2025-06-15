@@ -5,16 +5,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-top">
-        <div className="footer-links">
-          <h4>Информация</h4>
-          <ul>
-            <li><a href="/about">О нас</a></li>
-            <li><a href="/delivery">Доставка и оплата</a></li>
-            <li><a href="/policy">Политика возврата</a></li>
-            <li><a href="/contacts">Контакты</a></li>
-          </ul>
-        </div>
-
         <div className="footer-contact">
           <h4>Свяжитесь с нами</h4>
           <p>Email: support@runway.com</p>
