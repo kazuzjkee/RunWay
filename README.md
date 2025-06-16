@@ -55,7 +55,7 @@
 1. **Склонируйте репозиторий:**
 
     git clone https://github.com/kazuzjkee/RunWay.git 
-    cd ваш-проект
+    cd RunWay
 
 2. **Установите зависимости:**
 

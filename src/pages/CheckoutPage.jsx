@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import '../styles/CheckoutPage.css';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutPage = () => {
   const [cart] = useState(() => {
@@ -16,6 +17,8 @@ const CheckoutPage = () => {
     address: '',
     comment: '',
   });
+
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
 
@@ -78,7 +81,8 @@ ${order.items.map(item => `- ${item.title} (${item.size}), ${item.price} ₽`).j
             throw new Error('Ошибка отправки сообщения через Telegram API');
         }
 
-        alert('Заказ оформлен! Мы свяжемся с вами в ближайшее время.');
+        navigate('/thankyou', { state: { order } });
+
         localStorage.removeItem('cart'); 
         setFormData({ name: '', phone: '', address: '', comment: '' });
     } catch (error) {

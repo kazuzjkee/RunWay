@@ -1,0 +1,42 @@
+.thankyou-page {
+  height: 100vh;
+  width: 100%;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background-color: rgb(179, 21, 179);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.thankyou-page h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.thankyou-page p {
+  margin: 5px 0;
+}
+
+.thankyou-page button {
+  margin: 5px 0;
+  background-color: white;
+  color: rgb(179, 21, 179);
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.buttons {
+  padding: 0 20px;
+  min-width: 400px;
+  max-width: 600px;
+  width: 100%;
+}

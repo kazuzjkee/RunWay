@@ -1,12 +1,12 @@
 .info-section {
-  padding: 40px 20px;
+  padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
 .info-section h2, .features h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .info-section p {
@@ -18,7 +18,7 @@
 }
 
 .info-content {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .features {
