@@ -5,10 +5,8 @@ import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 import products from '../assets/data/products';
 
-// Список поддерживаемых брендов (для фильтрации)
 const BRANDS = ['nike', 'adidas', 'puma', 'new balance', 'reebok', 'jordan', 'converse', 'vans'];
 
-// Функция определения бренда из названия
 function detectBrand(title) {
   const lowerTitle = title.toLowerCase();
   return (
@@ -20,12 +18,10 @@ const WomenPage = () => {
   const [selectedBrand, setSelectedBrand] = useState('all');
   const [sortOption, setSortOption] = useState('default');
 
-  // Фильтруем товары по гендеру и бренду
   const filteredProducts = products
     .filter(p => p.gender === 'woman')
     .filter(p => selectedBrand === 'all' ? true : detectBrand(p.title) === selectedBrand);
 
-  // Сортируем товары
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortOption === 'alpha_asc') return a.title.localeCompare(b.title);
     if (sortOption === 'alpha_desc') return b.title.localeCompare(a.title);
@@ -34,7 +30,6 @@ const WomenPage = () => {
     return 0;
   });
 
-  // Получаем доступные бренды для фильтра
   const availableBrands = [...new Set(products.map(p => detectBrand(p.title)))];
 
   return (
@@ -44,7 +39,6 @@ const WomenPage = () => {
       <section className="catalog">
         <h2>Женские кроссовки</h2>
 
-        {/* Фильтры */}
         <div className="filters">
           <label>
             Бренд:
@@ -70,7 +64,6 @@ const WomenPage = () => {
           </label>
         </div>
 
-        {/* Список товаров */}
         <div className="product-list">
           {sortedProducts.length > 0 ? (
             sortedProducts.map(product => (

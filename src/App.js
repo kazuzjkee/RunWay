@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import MenPage from './pages/MenPage';
@@ -13,19 +13,17 @@ import ThankYouPage from './pages/ThankYouPage';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/men" element={<MenPage />} />
-        <Route path="/women" element={<WomenPage />} />
-        <Route path="/kids" element={<KidsPage />} />
-        <Route path="/product/:id" element={<ProductDetailPage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path='/cart' element={<CartPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-        <Route path="/thankyou" element={<ThankYouPage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/men" element={<MenPage />} />
+      <Route path="/women" element={<WomenPage />} />
+      <Route path="/kids" element={<KidsPage />} />
+      <Route path="/product/:id" element={<ProductDetailPage />} />
+      <Route path="/search" element={<SearchPage />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/thankyou" element={<ThankYouPage />} />
+    </Routes>
   );
 }
 
