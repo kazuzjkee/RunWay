@@ -1,20 +1,18 @@
 {
   "files": {
-    "main.css": "/RunWay/static/css/main.eab4c8f4.css",
-    "main.js": "/RunWay/static/js/main.eab944ed.js",
-    "static/js/453.90417698.chunk.js": "/RunWay/static/js/453.90417698.chunk.js",
+    "main.css": "/RunWay/static/css/main.b7369b2f.css",
+    "main.js": "/RunWay/static/js/main.31c71af5.js",
     "static/media/logo.PNG": "/RunWay/static/media/logo.6344682f6350d002c38e.PNG",
     "static/media/slick.svg": "/RunWay/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/RunWay/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/RunWay/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/RunWay/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/RunWay/index.html",
-    "main.eab4c8f4.css.map": "/RunWay/static/css/main.eab4c8f4.css.map",
-    "main.eab944ed.js.map": "/RunWay/static/js/main.eab944ed.js.map",
-    "453.90417698.chunk.js.map": "/RunWay/static/js/453.90417698.chunk.js.map"
+    "main.b7369b2f.css.map": "/RunWay/static/css/main.b7369b2f.css.map",
+    "main.31c71af5.js.map": "/RunWay/static/js/main.31c71af5.js.map"
   },
   "entrypoints": [
-    "static/css/main.eab4c8f4.css",
-    "static/js/main.eab944ed.js"
+    "static/css/main.b7369b2f.css",
+    "static/js/main.31c71af5.js"
   ]
 }
