@@ -11,7 +11,7 @@
 
 .categories {
   display: flex;
-  overflow-x: auto;
+  overflow: hidden;
   scroll-snap-type: x mandatory; 
   scroll-behavior: smooth;
   padding: 0; 
